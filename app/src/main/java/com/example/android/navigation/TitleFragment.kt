@@ -38,9 +38,10 @@ class TitleFragment : Fragment() {
         inflater?.inflate(R.menu.option_menu,menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         return NavigationUI.onNavDestinationSelected(item!!,
-                view!!.findNavController()) ||   super.onOptionsItemSelected(item)
+                view!!.findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
 }
